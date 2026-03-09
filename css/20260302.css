@@ -1,0 +1,72 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+body{
+    font-family: "Noto Serif TC", serif;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
+body {
+     font-family: "Klee One", cursive;
+}
+
+:root {
+  /* --- Blue 系列 (藍青、冷色、基底色) --- */
+  --sky-blue01: #456268; /* 深青灰 */
+  --sky-blue02: #79a3b1; /* 霧藍 */
+  --sky-blue03: #d0e8f2; /* 淺藍 */
+  --sky-blue04: #63b4b8; /* 湖綠 */
+  --sky-blue05: #a9e4d7; /* 薄荷青 */
+  --sky-blue06: #4ec9df; /* 電光藍 */
+  --sky-blue07: #63a1d0; /* 晴空藍 */
+  --sky-blue08: #3576a7; /* 湛藍 */
+  --sky-blue09: #344986; /* 深海藍 */
+  --sky-blue10: #fcf8ec; /* 雲朵白 (偏米色系，放在藍調作對比) */
+
+  /* --- Deep 系列 (深紫、暮色) --- */
+  --sky-deep01: #4b3869; /* midnight 紫 */
+  --sky-deep02: #664e88; /* 暮色紫 */
+
+  /* --- Pink 系列 (粉紫、晚霞、暖調) --- */
+  --sky-pink01: #a594f9; /* 薰衣草 */
+  --sky-pink02: #cdc1ff; /* 柔紫 */
+  --sky-pink03: #f5efff; /* 極淡紫 */
+  --sky-pink03b: rgba(245, 239, 255, 0.63); /* 極淡紫 */
+  --sky-pink04: #e5d9f2; /* 晚霞淡紫 */
+  --sky-pink05: #863a6f; /* 深粉紫 */
+  --sky-pink06: #975c8d; /* 梅紫 */
+  --sky-pink07: #d989b5; /* 糖果粉 */
+  --sky-pink08: #ffadbc; /* 蜜桃粉 */
+
+  /* --- A組：深夜沉靜 (Midnight) --- */
+  /* 使用 --sky-deep01 作為基底 (75, 56, 105) */
+  --sky-ui-bg-A: rgba(75, 56, 105, 0.4); 
+  --sky-ui-bg-B: rgba(75, 56, 105, 0.9); 
+  --sky-ui-text-A: var(--sky-blue10); /* #fcf8ec */
+
+  /* --- B組：清晨迷霧 (Morning) --- */
+  /* 使用 --sky-blue10 作為基底 (252, 248, 236) */
+  --sky-ui-bg-B: rgba(252, 248, 236, 0.75);
+  --sky-ui-text-B: var(--sky-blue09); /* #344986 */
+
+  /* --- C組：夢幻晚霞 (Sunset) --- */
+  /* 使用 --sky-pink05 作為基底 (134, 58, 111) */
+  --sky-ui-bg-C: rgba(134, 58, 111, 0.7);
+  --sky-ui-text-C: var(--sky-pink03); /* #f5efff */
+
+  /* 通用磨砂玻璃效果 (可選) */
+  --sky-glass-blur: blur(10px);
+
+  /* --- 方案 A：深邃夜空 (Deep Night to Electric) --- */
+  /* 從深海藍到電光藍的過渡，適合富有科技感或神祕感的背景 */
+  --sky-grad-A: linear-gradient(135deg, var(--sky-blue09) 0%, var(--sky-blue06) 100%);
+
+  /* --- 方案 B：夢幻夕陽 (Twilight to Peach) --- */
+  /* 從暮色紫到蜜桃粉的揉合，適合充滿療癒感與溫度的 UI 介面 */
+  --sky-grad-B: linear-gradient(135deg, var(--sky-deep02) 0%, var(--sky-pink07) 50%, var(--sky-pink08) 100%);
+
+  /* --- 方案 C：清新晨曦 (Mist to Soft Blue) --- */
+  /* 從薄荷青到淺藍的淡雅過渡，適合乾淨、輕盈的區塊設計 */
+  --sky-grad-C: linear-gradient(135deg, var(--sky-blue05) 0%, var(--sky-blue03) 100%);
+
+}

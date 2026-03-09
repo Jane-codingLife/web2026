@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane & Sami</title>
+    <link rel="stylesheet" href="css/20260302.css">
+    <style>
+        .section01 {
+            background-color: var(--sky-pink03);
+            /* 100vh => 隨著視窗大小改變尺寸(數字為比例%) */
+            height: 60vh;
+            position: relative;
+        }
+
+        .boxbg {
+            position: absolute;
+            background-color: var(--sky-pink07);
+            height: 80px;
+            width: 80px;
+        }
+
+        .box02 {
+            top: 0;
+            right: 0;
+        }
+
+        .box03 {
+            bottom: 0;
+            right: 0;
+        }
+
+        .box04 {
+            bottom: 0;
+            left: 0;
+        }
+
+        .userimg {
+            position: absolute;
+            top: 25px;
+            bottom: 25px;
+            left: 25px;
+            right: 25px;
+            background-color: var(--sky-blue01);
+            /* 放置圖片相關設定 */
+            background-image: url(img/Animals_001.avif);
+            background-position: center center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 2px var(--sky-deep01);
+
+            transition: transform 1s;
+        }
+
+        .usertext {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            box-sizing: border-box;
+            border-radius: 10px;
+
+            line-height: 1.1;
+            background-color: var(--sky-ui-bg-A);
+            color: var(--sky-ui-text-A);
+
+            padding: 10px;
+        }
+
+        .usertext h2 {
+            text-align: center;
+            margin-bottom: 2px;
+            margin-top: 10px;
+        }
+
+        .usertext h4 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .usertext p {
+            margin-bottom: 0;
+        }
+
+        .userimg:hover {
+            transform: scale(1.03);
+        }
+
+        .section02 {
+            position: relative;
+        }
+
+        .s2box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            /* background-color: var(--sky-ui-bg-C); */
+            background: var(--sky-grad-B);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            font-size: 25px;
+
+            transition: transform 1s;
+        }
+
+        .s2box01 {
+            top: 10px;
+            left: 13%;
+        }
+
+        .s2box02 {
+            top: 10px;
+            left: 43%;
+        }
+
+        .s2box03 {
+            top: 10px;
+            left: 73%;
+        }
+
+        .section02 a {
+            text-decoration: none;
+            color: var(--sky-ui-text-A);
+        }
+
+        .s2box:hover {
+            transform: rotate(10deg);
+            box-shadow: 4px 4px 8px 4px var(--sky-deep01);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section01">
+        <div class="boxbg box01"></div>
+        <div class="boxbg box02"></div>
+        <div class="boxbg box03"></div>
+        <div class="boxbg box04"></div>
+        <div class="userimg"></div>
+        <div class="usertext">
+            <h2>Jane & Sami</h2>
+            <hr>
+            <h4>全端工程師</h4>
+            <p>具備從介面設計（Frontend）到資料庫管理（Backend）的完整整合能力，致力於透過程式碼將複雜的商務邏輯轉化為直覺、高效的系統解決方案。</p>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="s2box s2box01">
+            <a href="20260209-01.html" target="_blank">260209-練習1</a>
+        </div>
+        <div class="s2box s2box02">
+            <a href="20260209-02.html" target="_blank">260209-練習2</a>
+        </div>
+        <div class="s2box s2box03">
+            <a href="20260223-01.html" target="_blank">260223-練習1</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
