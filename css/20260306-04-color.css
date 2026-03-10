@@ -1,0 +1,22 @@
+:root {
+  /* 主要品牌色 - 深藍色 (Header/Footer/標題) */
+  --brand-primary01: #1d3557; 
+  --brand-primary01b: #1d3557ce; 
+  --brand-primary02: #0c1e36;
+  
+  /* 強調色 - 活力橘 (預約試聽按鈕) */
+  --brand-accent01: #ff8c00;
+  --brand-accent02: #ffa500; /* 懸停效果建議色 */
+
+  /* 背景與輔助色 */
+  --brand-bg01: #e9f1f7;      /* 榜單項目的淡藍色背景 */
+  --brand-bg02: #1265a5;
+  --neutral-bg01: #e1eaf3;    /* 頁面次要背景灰 */
+  --neutral-bg02: #f0f0f0;
+  --neutral-white01: #ffffff; /* 純白色卡片背景 */
+
+  /* 文字與邊框 */
+  --text-dark01: #333333;     /* 主要內文深灰色 */
+  --text-light01: #ffffff;    /* 標籤/按鈕上的白色文字 */
+  --border-light01: #e0e0e0;  /* 師資介紹卡片的邊框色 */
+}
