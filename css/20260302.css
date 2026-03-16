@@ -20,6 +20,8 @@ body {
   --sky-blue07: #63a1d0; /* 晴空藍 */
   --sky-blue08: #3576a7; /* 湛藍 */
   --sky-blue09: #344986; /* 深海藍 */
+  --sky-blue09b: rgba(52, 72, 134, 0.5);
+  --sky-blue09c: rgba(52, 72, 134, 0.9);
   --sky-blue10: #fcf8ec; /* 雲朵白 (偏米色系，放在藍調作對比) */
 
   /* --- Deep 系列 (深紫、暮色) --- */
@@ -35,6 +37,7 @@ body {
   --sky-pink04: #e5d9f2; /* 晚霞淡紫 */
   --sky-pink05: #863a6f; /* 深粉紫 */
   --sky-pink06: #975c8d; /* 梅紫 */
+  --sky-pink06a: rgba(151, 92, 141, 0.5);
   --sky-pink07: #d989b5; /* 糖果粉 */
   --sky-pink08: #ffadbc; /* 蜜桃粉 */
 

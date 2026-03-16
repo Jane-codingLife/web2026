@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- 繁體中文語系:(1)zh-TW (2) zh-Hant-TW -->
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,15 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/20260302.css">
     <style>
-        *, p {
+        *,
+        p {
             padding: 0;
             margin: 0;
         }
 
         .container {
             margin-top: 40px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             box-shadow: 2px 2px 2px 2px #FF0000;
         }
 
@@ -31,24 +33,94 @@
             background-position: center center;
             background-size: cover;
         }
+
+        .header .info {
+            margin: 10px;
+        }
+
+        .header a {
+            display: block;
+            font-size: 30px;
+            background-color: var(--sky-pink05);
+            padding: 10px;
+            margin: 20px 40%;
+            color: var(--sky-ui-text-A);
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 1px 4px 4px 3px var(--sky-ui-bg-C);
+            transition: transform 0.5s;
+        }
+
+        .header a:hover {
+            transform: scale(1.1);
+        }
+
+        .content .text-box div {
+            background-color: var(--sky-blue09b);
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: 900;
+            font-size: 35px;
+        }
+
+        .container .text-box p {
+            font-size: 25px;
+            font-weight: 900;
+            background-color: var(--sky-blue09c);
+            color: var(--sky-blue10);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        .content .items li {
+            display: block;
+            border: 2px solid var(--sky-blue09);
+            margin-top: 20px;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 20%;
+            margin-right: 20%;
+            box-shadow: 3px 4px 5px 3px var(--sky-ui-bg-C);
+            transition: transform 0.5s;
+        }
+
+        .content .items li:hover {
+            transform: translateX(40px);
+        }
+
+        .content .items li div {
+            color: var(--sky-pink05);
+            font-weight: 900;
+        }
+
+        .content .items li p {
+            font-size: 25px;
+            padding-left: 30px;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="header">
             <div class="title h1 text-center">Thinnu x H1980 活躍生活系列</div>
             <div class="logo"></div>
-            <div class="info">
+            <div class="info text-center display-6">
                 <p>會員儲值$2500</p>
                 <p>點數在手～便捷在手</p>
             </div>
-            <a href="#">填表諮詢</a>
+            <a href="https://forms.gle/Ri3YkEEAwJm9qgB29" class="text-decoration-none">填表諮詢</a>
         </div>
 
         <div class="content">
-            <div class="text-box">
-                <div class="h1 text-center">教室六大優勢｜三館通用</div>
+            <div class="text-box text-center">
+                <div>教室六大優勢｜三館通用</div>
                 <p>分館據點：南京｜民權｜西門</p>
             </div>
             <ul class="items list-unstyled">
@@ -79,8 +151,9 @@
             </ul>
         </div>
 
-        <div class="footer text-center">Thinnu x H1980 © 2026 All Rights Reserved. | 版權所有 Jane & Sami</div>
+        <div class="footer text-center text-bg-dark">Thinnu x H1980 © 2026 All Rights Reserved. | 版權所有 Jane & Sami WebDesign.</div>
     </div>
 
 </body>
+
 </html>
