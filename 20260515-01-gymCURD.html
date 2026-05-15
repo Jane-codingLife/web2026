@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的HTML文件</title>
+    <title>練習範例：健身房會員方案管理系統</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/myCssTools.css">
     <style>
@@ -57,31 +57,33 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 pt-4">
-                <div class="display-4 text-center p-2 text-bg-primary rounded-3">產品列表</div>
+                <div class="display-4 text-center p-2 text-bg-info text-white rounded-3">方案列表</div>
                 <table class="mt-3 table shadow-lg table-bordered table-rwd">
                     <thead class="table-dark text-center">
                         <tr>
                             <th>ID</th>
-                            <th>產品名稱</th>
-                            <th>購買數量</th>
-                            <th>置放架位</th>
-                            <th>配料種類</th>
-                            <th>公升數</th>
+                            <th>方案名稱</th>
+                            <th>可招收名額</th>
+                            <th>上課時段</th>
+                            <th>可使用館別</th>
+                            <th>課程內容</th>
+                            <th>會員等級</th>
                             <th>#</th>
                         </tr>
                     </thead>
                     <tbody id="pdList">
                         <tr>
-                            <td data-th="ID">0</td>
-                            <td data-th="產品名稱">xxxx</td>
-                            <td data-th="購買數量">xxxx</td>
-                            <td data-th="置放架位">xxxx</td>
-                            <td data-th="配料種類">xxxx</td>
-                            <td data-th="公升數">xxxx</td>
+                            <td data-th="ID">xxxxx</td>
+                            <td data-th="方案名稱">xxxx</td>
+                            <td data-th="可招收名額">xxxx</td>
+                            <td data-th="上課時段">xxxx</td>
+                            <td data-th="可使用館別">xxxx</td>
+                            <td data-th="課程內容">xxxx</td>
+                            <td data-th="會員等級">xxxx</td>
                             <td>
                                 <button class="btn btn-warning update_btn" data-bs-toggle="modal"
-                                    data-bs-target="#updateModal" data-id="xxx" data-pname="xxx" data-pnum="xxx"
-                                    data-pshelf="xxx">更新</button>
+                                    data-bs-target="#updateModal" data-id="xxx" data-planName="xxx" data-quota="xxx"
+                                    data-period="xxx">更新</button>
                                 <button class="btn btn-danger" id="delete_btn">刪除</button>
                             </td>
                         </tr>
@@ -104,33 +106,30 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="pname" class="form-label col-form-label-lg">商品名稱</label>
-                        <input id="pname" type="text" class="form-control form-control-lg is-valid" disabled>
-                        <div class="valid-feedback">產品名稱符合規定</div>
-                        <div class="invalid-feedback">產品名稱不符合規定</div>
+                        <label for="planName" class="form-label col-form-label-lg">方案名稱</label>
+                        <input id="planName" type="text" class="form-control form-control-lg is-valid" placeholder="方案不可空白, 最多輸入10個字!!" disabled>
+                        <div class="valid-feedback">方案名稱符合規定</div>
+                        <div class="invalid-feedback">方案名稱不符合規定</div>
                     </div>
                     <div class="mb-3">
-                        <label for="pnum" class="form-label col-form-label-lg">購買數量</label>
-                        <input id="pnum" type="number" class="form-control form-control-lg is-valid" min="1" max="10"
-                            placeholder="最少1組，最多10組！">
-                        <div class="valid-feedback">數量符合規定</div>
-                        <div class="invalid-feedback">數量不符合規定</div>
+                        <label for="quota" class="form-label col-form-label-lg">可招收名額</label>
+                        <input id="quota" type="number" class="form-control form-control-lg is-valid" min="1" max="30" placeholder="每個方案至少 1 人, 最多招收 30 人!!">
+                        <div class="valid-feedback">人數符合規定</div>
+                        <div class="invalid-feedback">人數不符合規定</div>
                     </div>
                     <div class="mb-3">
-                        <label for="pshelf" class="form-label col-form-label-lg">置放架位</label>
-                        <select id="pshelf" class="form-select form-select-lg is-valid">
-                            <option value="" class="text-center text-info fw-bolder" disabled selected>-- 請選擇貨架編號 --
+                        <label for="period" class="form-label col-form-label-lg">上課時段 <mark
+                                class="rounded-2 bg-danger text-white">必選</mark></label>
+                        <select id="period" class="form-select form-select-lg is-valid">
+                            <option value="" class="text-center text-info fw-bolder" disabled selected>-- 請選擇上課時段 --
                             </option>
-                            <option value="編號01">貨架編號01</option>
-                            <option value="編號02">貨架編號02</option>
-                            <option value="編號03">貨架編號03</option>
-                            <option value="編號04">貨架編號04</option>
-                            <option value="編號05">貨架編號05</option>
-                            <option value="編號06">貨架編號06</option>
-                            <option value="編號07">貨架編號07</option>
+                            <option value="早上時段">早上時段</option>
+                            <option value="下午時段">下午時段</option>
+                            <option value="晚上時段">晚上時段</option>
+                            <option value="假日時段">假日時段</option>
                         </select>
                         <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">請選擇貨架</div>
+                        <div class="invalid-feedback">請選擇上課時段</div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -156,21 +155,22 @@
             $("#pdList").empty(); // 清空
 
             // 取得產品列表
-            axios.get('http://localhost:3000/products')
+            axios.get('http://localhost:3000/member')
                 .then(function (response) {
                     console.log(response);
                     response.data.forEach(function (item) {
                         const strHtml = `
                         <tr>
                             <td data-th="ID">${item.id}</td>
-                            <td data-th="產品名稱">${item.pname}</td>
-                            <td data-th="購買數量">${item.pnum}</td>
-                            <td data-th="置放架位">${item.pshelf}</td>
-                            <td data-th="配料種類">${item.burden}</td>
-                            <td data-th="公升數">${item.ccNum}</td>
-                            <td>
+                            <td data-th="方案名稱">${item.planName}</td>
+                            <td data-th="可招收名額">${item.quota}</td>
+                            <td data-th="上課時段">${item.period}</td>
+                            <td data-th="可使用館別">${item.branch01}</td>
+                            <td data-th="課程內容">${item.course01}</td>
+                            <td data-th="會員等級">${item.level01}</td>
+                            <td data-th="#">
                                 <button class="btn btn-warning update_btn" data-bs-toggle="modal"
-                                    data-bs-target="#updateModal" data-id="${item.id}" data-pname="${item.pname}" data-pnum="${item.pnum}" data-pshelf="${item.pshelf}">更新</button>
+                                    data-bs-target="#updateModal" data-id="${item.id}" data-name="${item.planName}" data-quota="${item.quota}" data-period="${item.period}">更新</button>
                                 <button class="btn btn-danger" id="delete_btn" data-id="${item.id}">刪除</button>
                             </td>
                         </tr>
@@ -188,15 +188,15 @@
             // 監聽更新按鈕 => 事件, .update_btn, 觸發後做何事
             // document => 整個瀏覽器
             $(document).on('click', '.update_btn', function () {
-                // console.log($(this).data('id'));
-                // console.log($(this).data('pname'));
-                // console.log($(this).data('pnum'));
-                // console.log($(this).data('pshelf'));
+                console.log($(this).data('id'));
+                console.log($(this).data('name'));
+                console.log($(this).data('quota'));
+                console.log($(this).data('period'));
 
                 // 將 .update_btn 隱藏的資料列塞入 updateModal 表單
-                $('#pname').val($(this).data('pname'));
-                $('#pnum').val($(this).data('pnum'));
-                $('#pshelf').val($(this).data('pshelf'));
+                $('#planName').val($(this).data('name'));
+                $('#quota').val($(this).data('quota'));
+                $('#period').val($(this).data('period'));
 
                 uid = $(this).data('id');
             })
@@ -206,7 +206,7 @@
                 // console.log($(this).data('id'));
                 // 彈出 doouble check 視窗
                 Swal.fire({
-                    title: "first: 是否確定刪除",
+                    title: "是否確定刪除此方案？",
                     showDenyButton: false,
                     showCancelButton: true,
                     confirmButtonText: "確認",
@@ -217,7 +217,7 @@
                     /* Read more about isConfirmed, isDenied below */
                     if (result.isConfirmed) {
                         Swal.fire({
-                            title: "second: 是否確定刪除",
+                            title: "方案刪除後將無法復原，是否確定刪除？",
                             showDenyButton: false,
                             showCancelButton: true,
                             confirmButtonText: "確認",
@@ -227,13 +227,13 @@
                         }).then((result) => {
                             /* Read more about isConfirmed, isDenied below */
                             if (result.isConfirmed) {
-                                axios.delete(`http://localhost:3000/products/${$(this).data('id')}`)
+                                axios.delete(`http://localhost:3000/member/${$(this).data('id')}`)
                                     .then(function (response) {
                                         console.log(response);
                                         if (response.status == 200) {
                                             // sweetalert 彈出確認 成功
                                             Swal.fire({
-                                                title: "產品刪除成功",
+                                                title: "方案刪除成功",
                                                 showDenyButton: false,
                                                 showCancelButton: false,
                                                 confirmButtonText: "確認",
@@ -242,7 +242,7 @@
                                             }).then((result) => {
                                                 /* Read more about isConfirmed, isDenied below */
                                                 if (result.isConfirmed) {
-                                                    location.href = "20260511-02-CURD.html";
+                                                    location.href = "20260515-01-gymCURD.html";
                                                 };
                                             });
                                         };
@@ -265,17 +265,17 @@
 
 
 
-            // ===== Button =====
-            $("#pnum").blur(function () {
+            // ===== 欄位防呆機制與資料更新至後台 =====
+            $("#quota").blur(function () {
                 $(this).removeClass('is-invalid is-valid');
-                if ($(this).val() >= 1 && $(this).val() <= 10) {
+                if ($(this).val() >= 1 && $(this).val() <= 30) {
                     // 符合規定 is-valid
                     $(this).addClass('is-valid');
-                    flag_pnum = true;
+                    flag_quota = true;
                 } else {
                     // 不符合規定 is-invalid
                     $(this).addClass('is-invalid');
-                    flag_pnum = false;
+                    flag_quota = false;
                 };
             });
 
@@ -284,18 +284,18 @@
                     // 數量欄位符合
                     // 更新至 JSON 中 (丟後端)
                     let dataJSON = {};
-                    dataJSON['pnum'] = Number($('#pnum').val()); // 強制轉換數字
-                    dataJSON['pshelf'] = $('#pshelf').val();
+                    dataJSON['quota'] = Number($('#quota').val()); // 強制轉換數字
+                    dataJSON['period'] = $('#period').val();
 
                     console.log(JSON.stringify(dataJSON));
 
-                    axios.patch(`http://localhost:3000/products/${uid}`, dataJSON)
+                    axios.patch(`http://localhost:3000/member/${uid}`, dataJSON)
                         .then(function (response) {
                             console.log(response);
                             if (response.status == 200) {
                                 // sweetalert 彈出確認 成功
                                 Swal.fire({
-                                    title: "產品更新成功",
+                                    title: "會員方案更新成功",
                                     showDenyButton: false,
                                     showCancelButton: false,
                                     confirmButtonText: "確認",
@@ -305,7 +305,7 @@
                                 }).then((result) => {
                                     /* Read more about isConfirmed, isDenied below */
                                     if (result.isConfirmed) {
-                                        location.href = "20260511-02-CURD.html";
+                                        location.href = "20260515-01-gymCURD.html";
                                     };
                                 });
                             }

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習範例：健身房會員方案管理系統</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myCssTools.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 shadow-lg rounded-2 mt-3 p-4">
+                <div class="h1 text-center text-bg-info p-2 rounded-4 fw-bolder text-light">新增會員方案</div>
+                <div class="mb-3">
+                    <label for="planName" class="form-label col-form-label-lg">方案名稱</label>
+                    <input id="planName" type="text" class="form-control form-control-lg is-invalid" list="plist"
+                        placeholder="方案不可空白, 最多輸入10個字!!">
+                    <datalist id="plist">
+                        <option value="燃脂入門"></option>
+                        <option value="肌力養成"></option>
+                        <option value="私人教練"></option>
+                        <option value="銀髮健康"></option>
+                        <option value="企業團課"></option>
+                    </datalist>
+                    <div class="valid-feedback">方案名稱符合規定</div>
+                    <div class="invalid-feedback">方案名稱不符合規定</div>
+                </div>
+                <div class="mb-3">
+                    <label for="quota" class="form-label col-form-label-lg">可招收名額</label>
+                    <input id="quota" type="number" class="form-control form-control-lg is-invalid" min="1" max="30"
+                        placeholder="每個方案至少 1 人, 最多招收 30 人!!">
+                    <div class="valid-feedback">人數符合規定</div>
+                    <div class="invalid-feedback">人數不符合規定</div>
+                </div>
+                <div class="mb-3">
+                    <label for="period" class="form-label col-form-label-lg">上課時段 <mark
+                            class="rounded-2 bg-danger text-white">必選</mark></label>
+                    <select id="period" class="form-select form-select-lg is-invalid">
+                        <option value="" class="text-center text-info fw-bolder" disabled selected>-- 請選擇上課時段 --
+                        </option>
+                        <option value="早上時段">早上時段</option>
+                        <option value="下午時段">下午時段</option>
+                        <option value="晚上時段">晚上時段</option>
+                        <option value="假日時段">假日時段</option>
+                    </select>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">請選擇上課時段</div>
+                </div>
+                <label class="form-label">可使用館別 <mark class="rounded-4">(可複選)</mark></label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="台中館" checked>
+                        <label class="form-check-label">台中館</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="北屯館">
+                        <label class="form-check-label">北屯館</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="西屯館">
+                        <label class="form-check-label">西屯館</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="南屯館">
+                        <label class="form-check-label">南屯館</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="南區">
+                        <label class="form-check-label">南區</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="北區">
+                        <label class="form-check-label">北區</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="西區">
+                        <label class="form-check-label">西區</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="東勢">
+                        <label class="form-check-label">東勢</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="branch01" type="checkbox" class="form-check-input is-valid" value="西門">
+                        <label class="form-check-label">西門</label>
+                    </div>
+                    <div id="branch_feeback" class="small text-success">符合勾選條件</div>
+                </div>
+
+                <label class="form-label">課程內容 <mark class="rounded-4">(可複選)</mark></label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input name="course01" type="checkbox" class="form-check-input is-invalid" value="重訓">
+                        <label class="form-check-label">重訓</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="course01" type="checkbox" class="form-check-input is-invalid" value="有氧">
+                        <label class="form-check-label">有氧</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="course01" type="checkbox" class="form-check-input is-invalid" value="瑜珈">
+                        <label class="form-check-label">瑜珈</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="course01" type="checkbox" class="form-check-input is-invalid" value="飛輪">
+                        <label class="form-check-label">飛輪</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="course01" type="checkbox" class="form-check-input is-invalid" value="拳擊">
+                        <label class="form-check-label">拳擊</label>
+                    </div>
+                    <div id="course_feeback" class="small text-danger">至少勾選一件課程內容</div>
+                </div>
+
+                <label class="form-label">會員等級</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input is-invalid" name="level01" value="一般會員">
+                        <label class="form-check-label">一般會員</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input is-invalid" name="level01" value="白金會員">
+                        <label class="form-check-label">白金會員</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input is-invalid" name="level01" value="VIP會員">
+                        <label class="form-check-label">VIP會員</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input is-invalid" name="level01" value="企業會員">
+                        <label class="form-check-label">企業會員</label>
+                    </div>
+                    <div id="level_feeback" class="small text-danger">請選擇會員等級</div>
+                </div>
+
+                <div class="text-end">
+                    <button id="ok_btn" class="btn btn-primary">確認新增</button>
+                    <button id="reset" class="btn btn-secondary">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script>
+        let flag_planName = false;
+        let flag_quota = false;
+        let flag_period = false;
+        let flag_branch01 = true;
+        let flag_course01 = false;
+        let flag_level01 = true;
+        $(function () {
+            // 輸入欄位監聽 #planName
+            // blur => 輸入完畢離開時(滑鼠點擊其他地方時的行為)
+            // this => 當下/現在發生的事
+            $("#planName").blur(function () {
+                $(this).removeClass('is-invalid is-valid');
+                if ($(this).val().length >= 1 && $(this).val().length <= 10) {
+                    // 符合規定 is-valid
+                    $(this).addClass('is-valid');
+                    flag_planName = true;
+                } else {
+                    // 不符合規定 is-invalid
+                    $(this).addClass('is-invalid');
+                    flag_planName = false;
+                };
+            });
+
+            $("#quota").blur(function () {
+                $(this).removeClass('is-invalid is-valid');
+                if ($(this).val() >= 1 && $(this).val() <= 30) {
+                    // 符合規定 is-valid
+                    $(this).addClass('is-valid');
+                    flag_quota = true;
+                } else {
+                    // 不符合規定 is-invalid
+                    $(this).addClass('is-invalid');
+                    flag_quota = false;
+                };
+            });
+
+            // select
+            // change => 有改變就觸發
+            $("#period").change(function () {
+                // console.log($(this).val());
+                $(this).removeClass('is-invalid');
+                $(this).addClass('is-valid');
+                flag_period = true;
+            });
+
+            // Checkbox
+            $("input[name='branch01']").change(function () {
+                console.log($("input[name='branch01']:checked").length);
+                $("input[name='branch01']").removeClass('is-invalid');
+                if ($("input[name='branch01']:checked").length > 0) {
+                    $("input[name='branch01']").addClass('is-valid');
+                    $("#branch_feeback").removeClass('text-danger').addClass('text-success').text('符合勾選條件');
+                    flag_branch01 = true;
+                } else {
+                    $("input[name='branch01']").addClass('is-invalid');
+                    $("#branch_feeback").removeClass('text-success').addClass('text-danger').text('至少勾選一個上課地點');
+                    flag_branch01 = false;
+                };
+            });
+
+            $("input[name='course01']").change(function () {
+                console.log($("input[name='course01']:checked").length);
+                $("input[name='course01']").removeClass('is-invalid');
+                if ($("input[name='course01']:checked").length > 0) {
+                    $("input[name='course01']").addClass('is-valid');
+                    $("#course_feeback").removeClass('text-danger').addClass('text-success').text('符合勾選條件');
+                    flag_course01 = true;
+                } else {
+                    $("input[name='course01']").addClass('is-invalid');
+                    $("#course_feeback").removeClass('text-success').addClass('text-danger').text('至少勾選一件課程內容');
+                    flag_course01 = false;
+                };
+            });
+
+            // Radio
+            $("input[name='level01']").change(function () {
+                // console.log($("input[name='ccNum']:checked").val());
+                $("input[name='level01']").removeClass('is-invalid').addClass('is-valid');
+                $("#level_feeback").removeClass('text-danger').addClass('text-success').text('符合勾選條件');
+                flag_level01 = true;
+            });
+
+            $("#reset").click(function () {
+                location.href = "20260515-01-gymCreate.html";
+            });
+
+            // 按鈕監聽 #ok_btn
+            $("#ok_btn").click(function () {
+                if (flag_planName && flag_quota && flag_period && flag_branch01 && flag_course01 && flag_level01) {
+                    // console.log($("#pname").val());
+
+                    // 收集 #branch01 的 checkbox 資料
+                    let branchs = [];
+                    // input 標籤，屬性 name 為 burden 的區塊，只找被 checked
+                    // each => 每個都拜訪
+                    $("input[name='branch01']:checked").each(function () {
+                        // console.log($(this).val());
+                        branchs.push($(this).val());
+                    });
+                    console.log(branchs);
+                    console.log(branchs.join(", "));
+
+                    // 收集 #course01 的 checkbox 資料
+                    let courses = [];
+                    // input 標籤，屬性 name 為 burden 的區塊，只找被 checked
+                    // each => 每個都拜訪
+                    $("input[name='course01']:checked").each(function () {
+                        // console.log($(this).val());
+                        courses.push($(this).val());
+                    });
+                    console.log(courses);
+                    console.log(courses.join(", "));
+
+                    // 轉 JSON 格式 => 物件
+                    let dataJSON = {};
+                    dataJSON["planName"] = $("#planName").val();
+                    dataJSON["quota"] = $("#quota").val();
+                    dataJSON["period"] = $("#period").val();
+                    dataJSON["branch01"] = branchs.join(', ');
+                    dataJSON["course01"] = courses.join(', ');
+                    dataJSON["level01"] = $("input[name='level01']:checked").val();
+
+                    console.log(JSON.stringify(dataJSON));
+
+                    // 將 JSON 字串傳遞至後端
+                    // CRUD 新增C 讀取R 更新U 刪除D
+                    axios.post('http://localhost:3000/member', dataJSON)
+                        .then(function (response) {
+                            console.log(response);
+                            if (response.status == 201) {
+                                // sweetalert 彈出確認 成功
+                                Swal.fire({
+                                    title: "會員建置成功",
+                                    showDenyButton: false,
+                                    showCancelButton: false,
+                                    confirmButtonText: "確認",
+                                    denyButtonText: `Don't save`,
+                                    icon: "success",
+                                    allowOutsideClick: false
+                                }).then((result) => {
+                                    /* Read more about isConfirmed, isDenied below */
+                                    if (result.isConfirmed) {
+                                        location.href = "20260515-01-gymCreate.html";
+                                    };
+                                });
+                            } else {
+                                // sweetalert 彈出確認 警告錯誤
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        })
+                        .finally(function () {
+                            // always executed
+                        });
+
+                } else {
+                    // alert("商品名稱輸入錯誤! 請在檢查!!");
+                    Swal.fire({
+                        title: "輸入錯誤",
+                        text: "輸入錯誤，請檢查是否符合規則。",
+                        icon: "error",
+                        allowOutsideClick: false,
+                    });
+                };
+            });
+        });
+    </script>
+</body>
+
+</html>
